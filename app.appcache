@@ -1,5 +1,7 @@
 CACHE MANIFEST
 index.html
+font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3
+font-awesome/fonts/fontawesome-webfont.ttf?v=4.0.3 
 color/default.css
 css/custom.css
 css/bootstrap.min.css
