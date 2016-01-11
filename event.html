@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://app.welkio.com/start -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>EventApp Register</title>
+
+		<link rel="stylesheet" type="text/css" href="public/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="./public/css/register.css">
+		<link rel="stylesheet" type="text/css" href="./source/styles/custom.css">
+		<link rel="shortcut icon" href="https://assets.welkio.com/v50/img/favicon.ico">
+		<link rel="apple-touch-icon" href="https://assets.welkio.com/v50/img/apple-touch-icon.png">
+		<script src="./public/build/react.js"></script>
+		<script src="./public/build/react-dom.js"></script>
+		<script src="./public/js/babel.min.js"></script>
+		<script type="text/babel" src="./source/components/attendee-registration.js"></script>
+	</head>
+	<body class="guest focus-layout" cz-shortcut-listen="true">
+		<div id="wrapper">
+			<header class="navbar navbar-default">
+				<div class="container">
+					<div class="col-md-24">
+						<div class="logo pull-left">
+							<a href="#"><h3><b>EventApp</b></h3></a>
+						</div>
+						<div class="logo pull-right">
+							<div class="collapse navbar-collapse" id="menu">
+								<ul class="nav navbar-nav navbar-right">
+								<li><a href="index.html">Home</a></li>
+								<li class="active"><a href="event.html">Find Events</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<div class="container">
+				<div class="row signup-page">
+					<div class="col-sm-16 col-sm-offset-4 col-md-14 col-md-offset-5 col-lg-12 col-lg-offset-6">
+						<div class="page-header text-center">
+							<h1>The friendliest visitor sign-in software for your office.</h1>
+							<p><small>Security doesn’t have to be surly. This modern visitor software that does everything but shake hands.</small></p>
+						</div>
+						<div class="panel">
+								<div class="panel-body">
+									
+										<!--
+											Component Hierarchy
+											- AttendeeRegisration
+												- ContentPageOne
+													- SearchAttendee
+												- ContentPageTwo
+										-->
+										<div id="attendee-registration"></div>
+
+								</div>
+						</div>
+					</div>
+				</div> <!-- /.col-sm-10 -->
+			</div> <!-- /.row -->
+		</div>
+		
+
+		<footer>
+			<div class="container">
+				<ul class="right hidden-print">
+				<li><a href="https://welkio.com/terms/" target="_blank">Terms</a></li>
+				<li><a href="https://welkio.com/privacy/" target="_blank">Privacy</a></li>
+				<li><a href="mailto:help@welkio.com" class="intercom-activator"><i class="icon icon-lg icon-comments"></i></a></li>
+				</ul>
+				<span class="copyright">© 2016 EventApp</span>
+			</div>
+		</footer>
+		
+		<script type="text/javascript" src="./public/js/register.js"></script>
+		<script>
+		$(function($) {
+			$('#input-phone').intlTelInput({
+				autoPlaceholder: false,
+				utilsScript: "https:\/\/assets.welkio.com\/v50\/js\/libphonenumber-utils.js"
+			});
+
+			$('#signup-form').submit(function()
+			{
+				$('#input-phone-e164').val($('#input-phone').intlTelInput('getNumber'));
+			});
+		});
+		</script>
+			
+	</body>
+</html>
